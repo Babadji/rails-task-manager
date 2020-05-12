@@ -5,7 +5,8 @@
       <h1>All your tasks</h1>
       <ul>
         <% @tasks.each do |task| %>
-          <li><%= link_to task.title, task_path(task.id) %></li>
+          <li><%= task.completed ? "☑︎" : "☐" %>
+            <%= link_to task.title, task_path(task.id) %></li>
         <% end %>
         <hr>
         <%= link_to "Create a task", tasks_new_path %>
@@ -13,6 +14,3 @@
     </div>
   </div>
 </div>
-
-
-
