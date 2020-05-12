@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <br>
+      <h3>Task details</h3>
+      <ul>
+        <li>
+          <%= @task.details %>
+        </li>
+      </ul>
+      <hr>
+      <%= link_to "Update a task", edit_task_path(@task) %>
+      <%= link_to "Destroy a task", task_path(@task), method: "delete", data: {confirm: "Are you sure"} %>
+      <hr>
+      <%= link_to "go back to task list", tasks_path %>
+    </div>
+  </div>
+</div>
+
